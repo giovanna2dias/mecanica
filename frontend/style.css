@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #222;
+}
+
+.abas {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.aba-btn {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background: #f2f2f2;
+  cursor: pointer;
+}
+
+.aba-btn.ativo {
+  background: #333;
+  color: #fff;
+}
+
+.aba {
+  display: none;
+}
+
+.aba.ativo {
+  display: block;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+form input,
+form select {
+  padding: 6px;
+  flex: 1 1 150px;
+}
+
+form button {
+  padding: 6px 16px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 6px 8px;
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  background: #f2f2f2;
+}

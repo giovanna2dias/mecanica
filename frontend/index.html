@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Oficina Mecânica</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Oficina Mecânica</h1>
+
+  <nav class="abas">
+    <button class="aba-btn ativo" data-aba="clientes">Clientes</button>
+    <button class="aba-btn" data-aba="veiculos">Veículos</button>
+    <button class="aba-btn" data-aba="manutencoes">Manutenções</button>
+  </nav>
+
+  <section id="aba-clientes" class="aba ativo">
+    <h2>Cadastrar cliente</h2>
+    <form id="form-cliente">
+      <input type="text" name="nome" placeholder="Nome" required />
+      <input type="text" name="cpf" placeholder="CPF" />
+      <input type="text" name="telefone" placeholder="Telefone" />
+      <input type="text" name="endereco" placeholder="Endereço" />
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    <h2>Clientes</h2>
+    <table id="tabela-clientes">
+      <thead>
+        <tr><th>ID</th><th>Nome</th><th>CPF</th><th>Telefone</th><th>Endereço</th><th>Veículos</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div id="veiculos-do-cliente"></div>
+  </section>
+
+  <section id="aba-veiculos" class="aba">
+    <h2>Cadastrar veículo</h2>
+    <form id="form-veiculo">
+      <select name="id_cliente" required>
+        <option value="">Selecione o cliente</option>
+      </select>
+      <input type="text" name="placa" placeholder="Placa" required />
+      <input type="text" name="marca" placeholder="Marca" />
+      <input type="text" name="modelo" placeholder="Modelo" />
+      <input type="number" name="ano" placeholder="Ano" />
+      <input type="text" name="cor" placeholder="Cor" />
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    <h2>Veículos</h2>
+    <table id="tabela-veiculos">
+      <thead>
+        <tr><th>ID</th><th>Placa</th><th>Marca</th><th>Modelo</th><th>Ano</th><th>Cor</th><th>Cliente</th><th>Histórico</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section id="aba-manutencoes" class="aba">
+    <h2>Registrar manutenção</h2>
+    <form id="form-manutencao">
+      <select name="id_veiculo" required>
+        <option value="">Selecione o veículo</option>
+      </select>
+      <input type="date" name="data_entrada" required />
+      <input type="text" name="descricao" placeholder="Descrição do problema" />
+      <input type="text" name="tipo" placeholder="Tipo de serviço" />
+      <select name="situacao">
+        <option value="aguardando">Aguardando</option>
+        <option value="em andamento">Em andamento</option>
+        <option value="concluida">Concluída</option>
+      </select>
+      <button type="submit">Registrar</button>
+    </form>
+
+    <h2>Histórico do veículo selecionado</h2>
+    <table id="tabela-manutencoes">
+      <thead>
+        <tr><th>ID</th><th>Veículo</th><th>Entrada</th><th>Descrição</th><th>Tipo</th><th>Situação</th><th>Entrega</th><th>Valor</th><th>Ações</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
