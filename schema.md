@@ -41,7 +41,7 @@ VALUES
 
 
 -- ==========================================
--- INSERINDO VEÍCULOS
+-- INSERINDO VEÍCULOSs
 -- ==========================================
 
 INSERT INTO Veículo (Placa_vei, Marca_vei, Modelo_vei, Ano_vei, Cor_vei, Id_cliente)
